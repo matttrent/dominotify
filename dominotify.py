@@ -73,7 +73,7 @@ def find_domino_projects(paths=['.']):
         files = glob.glob(glob_path, recursive=True)
         config_files += files
 
-    local_config = '.domino/config.json'
+    local_config = os.path.join('.', '.domino', 'config.json')
     if os.path.isfile(local_config):
         config_files.append(local_config)
 
@@ -154,6 +154,10 @@ if __name__ == '__main__':
         paths = sys.argv[1:]
 
     projects = find_domino_projects(paths)
+
+    print('watching projects:')
+    for proj in projects:
+        print('    {owner}/{project_name}'.format(**proj))
     
     while True:
 
