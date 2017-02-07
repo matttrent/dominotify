@@ -14,7 +14,7 @@ To run:
 
 Todo:
 
-- Growl notifier support
+- Growl notify support
 
 Notes:
 
