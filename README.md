@@ -1,8 +1,8 @@
 # dominotify
 
-OS X notifications of Domino Data Lab runs
+OS X notifications of Domino Data Lab runs.
 
-Setup
+Setup:
 
     brew install terminal-notifier
     pip install requests
@@ -10,4 +10,12 @@ Setup
 
 To run:
 
-    ./dominotify.py [search_path] &
+    ./dominotify.py [search_paths] &
+
+Todo:
+
+- Growl notifier support
+
+Notes:
+
+Sadly, the current combination of OS X & terminal-notifier does not support URLs.  Hopefully in the future, clicking the notification will open the results page.
